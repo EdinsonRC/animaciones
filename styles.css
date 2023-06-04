@@ -1,0 +1,126 @@
+body {
+  background-color: rgb(173, 230, 225);
+  position: relative;
+}
+
+.card section {
+  backface-visibility: hidden;
+  transition: 1s;
+}
+
+.card .front {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 300px;
+  /* border: 1px solid #123; */
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0.5px 0.5px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 10% 0 0 -10%;
+  animation: parpadeo 2s ease-in-out;
+  border: 3px solid rgb(0, 187, 249);
+  transform: perspective(500px) rotateY(0deg);
+}
+
+.card:hover .front {
+  border: 3px solid goldenrod;
+  transform: perspective(500px) rotateY(180deg);
+}
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.card .back {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 300px;
+  /* border: 1px solid #123; */
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0.5px 0.5px 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 10% 0 0 -10%;
+  animation: parpadeo 2s ease-in-out;
+  border: 3px solid rgb(0, 187, 249);
+  transform: perspective(500px) rotateY(180deg);
+}
+
+.card:hover .back {
+  border: 3px solid goldenrod;
+  transform: perspective(500px) rotateY(360deg);
+}
+
+@keyframes parpadeo {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.linea1 {
+  transform: scale(1);
+  transition: transform 2s ease-out;
+}
+
+.linea1:hover {
+  transform: scale(1.1);
+}
+
+.imagen {
+  width: 280px;
+  /* align-items: center; */
+  border-radius: 20px;
+  transform: scale(1);
+  transition: trabsform 2s ease-out;
+  animation: mas 1.5s infinite alternate ease-out;
+}
+
+.imagen2 {
+  width: 280px;
+  /* align-items: center; */
+  border-radius: 20px;
+  transform: scale(1);
+  transition: transform 2s ease-out;
+  animation: mas 1.5s alternate ease-out;
+  backface-visibility: hidden;
+}
+
+@keyframes mas {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+h1 {
+  color: darkslategrey;
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  color: darkgrey;
+  text-align: center;
+  height: 40px;
+}
